@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.1](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.1.0...v1.1.1) (2023-04-15)
+
+
+### Bug Fixes
+
+* Update README.md ([a9a177e](https://github.com/aws-ss/terraform-aws-guardduty/commit/a9a177ec43485db4dfa3cdf9e479afdef8fc9a6b))
+
 ## [1.1.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.0.0...v1.1.0) (2023-04-15)
 
 
