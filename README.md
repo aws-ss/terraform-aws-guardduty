@@ -1,4 +1,4 @@
-`# terraform-aws-guardduty
+# terraform-aws-guardduty
 
 A Terraform module that creates an Amazon GuardDuty.
 
