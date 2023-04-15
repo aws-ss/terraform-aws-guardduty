@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.1.1...v1.2.0) (2023-04-15)
+
+
+### Features
+
+* Support to manage a GuardDuty IPSet ([6999c60](https://github.com/aws-ss/terraform-aws-guardduty/commit/6999c607a2f882866d4f1691d752bb710e9456f1))
+
 ### [1.1.1](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.1.0...v1.1.1) (2023-04-15)
 
 
