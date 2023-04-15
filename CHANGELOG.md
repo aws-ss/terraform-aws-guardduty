@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.0.0...v1.1.0) (2023-04-15)
+
+
+### Features
+
+* Support create ThreatIntelSet ([8866b16](https://github.com/aws-ss/terraform-aws-guardduty/commit/8866b1648fecb70911c6de62020d17417159d23c))
+
 ## 1.0.0 (2023-04-15)
 
 
