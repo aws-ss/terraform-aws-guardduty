@@ -10,7 +10,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.59.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.63.0 |
 
 ## Modules
 
@@ -26,13 +26,12 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_activate"></a> [activate](#input\_activate) | (Required) Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet. | `list(bool)` | n/a | yes |
-| <a name="input_detector_id"></a> [detector\_id](#input\_detector\_id) | (Required) The detector ID of the GuardDuty. | `list(string)` | n/a | yes |
-| <a name="input_format"></a> [format](#input\_format) | (Required) The format of the file that contains the ThreatIntelSet. | `list(string)` | n/a | yes |
-| <a name="input_location"></a> [location](#input\_location) | (Required) The URI of the file that contains the ThreatIntelSet. | `list(string)` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | (Required) The friendly name to identify the ThreatIntelSet. | `list(string)` | n/a | yes |
-| <a name="input_policy"></a> [policy](#input\_policy) | (Required) GuardDuty policy to ThreatIntelSet. | `any` | `null` | no |
-| <a name="input_tags"></a> [tags](#input\_tags) | (Optional) Key-value map of resource tags. | `list(map(string))` | `null` | no |
+| <a name="input_activate"></a> [activate](#input\_activate) | (Required) Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet. | `bool` | n/a | yes |
+| <a name="input_detector_id"></a> [detector\_id](#input\_detector\_id) | (Required) The detector ID of the GuardDuty. | `string` | n/a | yes |
+| <a name="input_format"></a> [format](#input\_format) | (Required) The format of the file that contains the ThreatIntelSet. | `string` | n/a | yes |
+| <a name="input_location"></a> [location](#input\_location) | (Required) The URI of the file that contains the ThreatIntelSet. | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | (Required) The friendly name to identify the ThreatIntelSet. | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | (Optional) Key-value map of resource tags. | `map(string)` | `null` | no |
 
 ## Outputs
 
