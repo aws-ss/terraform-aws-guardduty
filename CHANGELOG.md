@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.3.0...v1.4.0) (2023-04-23)
+
+
+### Features
+
+* Support to manage a GuardDuty member ([c856de6](https://github.com/aws-ss/terraform-aws-guardduty/commit/c856de662a900f98cd829216ab356e6ee00c453b))
+
 ## [1.3.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.2.0...v1.3.0) (2023-04-23)
 
 
