@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.2.0...v1.3.0) (2023-04-23)
+
+
+### Features
+
+* Support to manages the GuardDuty Organization Configuration ([958c240](https://github.com/aws-ss/terraform-aws-guardduty/commit/958c240a9f3f17c20e16a89496076d4c627ad0f0))
+
 ## [1.2.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.1.1...v1.2.0) (2023-04-15)
 
 
