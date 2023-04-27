@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.5.0...v1.6.0) (2023-04-27)
+
+
+### Features
+
+* Support to accept a pending GuardDuty invite ([fd69528](https://github.com/aws-ss/terraform-aws-guardduty/commit/fd695280463bc477fe2636fe4158c1c481217c2b))
+
 ## [1.5.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.4.0...v1.5.0) (2023-04-23)
 
 
