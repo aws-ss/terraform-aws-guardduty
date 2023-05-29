@@ -13,6 +13,6 @@ $ terraform plan
 $ terraform apply
 ```
 
-### **_NOTE:_**  
+#### **_NOTE:_**  
 
 * The AWS account utilizing this resource must be an Organizations primary account.
