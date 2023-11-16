@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.6.0...v2.0.0) (2023-11-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Support for features in GuardDuty Detector
+
+### Features
+
+* Support for features in GuardDuty Detector ([b04994e](https://github.com/aws-ss/terraform-aws-guardduty/commit/b04994eff425a18d355f6fe18d754725766e81da)), closes [/github.com/hashicorp/terraform-provider-aws/pull/31463#issuecomment-1793968826](https://github.com/aws-ss//github.com/hashicorp/terraform-provider-aws/pull/31463/issues/issuecomment-1793968826)
+
 ## [1.6.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.5.0...v1.6.0) (2023-04-27)
 
 
