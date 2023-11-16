@@ -16,13 +16,13 @@ A Terraform module that creates an Amazon GuardDuty.
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.6 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.51.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.25.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.63.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.25.0 |
 
 ## Modules
 
@@ -38,7 +38,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_datasources"></a> [datasources](#input\_datasources) | (Optional) Describes which data sources will be enabled for the detector. | `map(string)` | `null` | no |
 | <a name="input_enable"></a> [enable](#input\_enable) | (Required) Enable monitoring and feedback reporting. Setting to false is equivalent to 'suspending' GuardDuty. | `string` | n/a | yes |
 | <a name="input_finding_publishing_frequency"></a> [finding\_publishing\_frequency](#input\_finding\_publishing\_frequency) | (Optional) Specifies the frequency of notifications sent for subsequent finding occurrences. | `string` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | (Optional) Map of key-value pairs to associate with the resource. | `map(string)` | `null` | no |
