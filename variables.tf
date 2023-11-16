@@ -9,12 +9,6 @@ variable "finding_publishing_frequency" {
   default     = null
 }
 
-variable "datasources" {
-  description = "(Optional) Describes which data sources will be enabled for the detector."
-  type        = map(string)
-  default     = null
-}
-
 variable "tags" {
   description = "(Optional) Map of key-value pairs to associate with the resource."
   type        = map(string)
