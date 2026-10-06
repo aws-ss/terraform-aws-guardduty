@@ -1,15 +1,20 @@
-variable "auto_enable" {
-  description = "(Required) When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region."
-  type        = bool
+variable "region" {
+  description = "(Optional) Region where this resource will be managed. Defaults to the Region set in the provider configuration."
+  type        = string
+  default     = null
+}
+
+variable "auto_enable_organization_members" {
+  description = "(Required) Indicates the auto-enablement configuration of GuardDuty for the member accounts in the organization. Valid values: ALL, NEW, NONE."
+  type        = string
+
+  validation {
+    condition     = contains(["ALL", "NEW", "NONE"], var.auto_enable_organization_members)
+    error_message = "auto_enable_organization_members must be one of ALL, NEW, NONE."
+  }
 }
 
 variable "detector_id" {
   description = "(Required) The detector ID of the GuardDuty account."
   type        = string
-}
-
-variable "datasources" {
-  description = "(Optional) Configuration for the collected datasources."
-  type        = map(string)
-  default     = null
 }
