@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v2.0.0...v3.0.0) (2026-10-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* Support for AWS provider v6 in Detector
+
+### Features
+
+* Support for AWS provider v6 in Detector ([9e6cd57](https://github.com/aws-ss/terraform-aws-guardduty/commit/9e6cd57fccb0ac651be29e07eef3219745d236d4))
+
 ## [2.0.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v1.6.0...v2.0.0) (2023-11-16)
 
 
