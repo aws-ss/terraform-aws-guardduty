@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v3.0.0...v3.1.0) (2026-10-06)
+
+
+### Features
+
+* Rename features module to detector_feature ([eb8ba97](https://github.com/aws-ss/terraform-aws-guardduty/commit/eb8ba9793bd8a3ea31ebeed7d55d4f595a9d35d3))
+
 ## [3.0.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v2.0.0...v3.0.0) (2026-10-06)
 
 
