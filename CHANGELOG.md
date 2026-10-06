@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.0.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v3.1.0...v4.0.0) (2026-10-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* Replace datasources with organization_configuration_feature module
+
+### Features
+
+* Replace datasources with organization_configuration_feature module ([43871a5](https://github.com/aws-ss/terraform-aws-guardduty/commit/43871a501dd1f83b7b93ba5c358a5cf611ed979c))
+
 ## [3.1.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v3.0.0...v3.1.0) (2026-10-06)
 
 
