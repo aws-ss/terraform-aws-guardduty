@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.1.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v4.0.0...v4.1.0) (2026-10-06)
+
+
+### Features
+
+* Support for AWS provider v6 in other submodules ([fbfcab8](https://github.com/aws-ss/terraform-aws-guardduty/commit/fbfcab8e52f3573e66b0b75ea96ea186d31e8512))
+
 ## [4.0.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v3.1.0...v4.0.0) (2026-10-06)
 
 
