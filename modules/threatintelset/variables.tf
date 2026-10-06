@@ -9,8 +9,13 @@ variable "detector_id" {
 }
 
 variable "format" {
-  description = "(Required) The format of the file that contains the ThreatIntelSet."
+  description = "(Required) The format of the file that contains the ThreatIntelSet. Valid values: TXT, STIX, OTX_CSV, ALIEN_VAULT, PROOF_POINT, FIRE_EYE."
   type        = string
+
+  validation {
+    condition     = contains(["TXT", "STIX", "OTX_CSV", "ALIEN_VAULT", "PROOF_POINT", "FIRE_EYE"], var.format)
+    error_message = "format must be one of TXT, STIX, OTX_CSV, ALIEN_VAULT, PROOF_POINT, FIRE_EYE."
+  }
 }
 
 variable "location" {

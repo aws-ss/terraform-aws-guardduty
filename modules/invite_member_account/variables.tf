@@ -1,6 +1,11 @@
 variable "account_id" {
   description = "(Required) AWS account ID for member account."
   type        = string
+
+  validation {
+    condition     = can(regex("^[0-9]{12}$", var.account_id))
+    error_message = "account_id must be a 12-digit AWS account ID."
+  }
 }
 
 variable "detector_id" {
@@ -26,7 +31,7 @@ variable "invitation_message" {
 }
 
 variable "disable_email_notification" {
-  description = "Optional) Boolean whether an email notification is sent to the accounts."
+  description = "(Optional) Boolean whether an email notification is sent to the accounts."
   type        = bool
   default     = false
 }
