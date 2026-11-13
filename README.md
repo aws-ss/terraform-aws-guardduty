@@ -12,6 +12,7 @@ A Terraform module that creates an Amazon GuardDuty.
 - GuardDuty Detector Features
 - GuardDuty Detector Enable/Disable
 - Set Trust/Threat IP list
+- Findings Filter (Saved/Suppression rules)
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
