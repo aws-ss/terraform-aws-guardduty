@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.2.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v4.1.0...v4.2.0) (2026-11-13)
+
+
+### Features
+
+* Add filter submodule ([e39c990](https://github.com/aws-ss/terraform-aws-guardduty/commit/e39c9906b4c6c5646a6fee289b2bba7c2c40459c))
+
 ## [4.1.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v4.0.0...v4.1.0) (2026-10-06)
 
 
