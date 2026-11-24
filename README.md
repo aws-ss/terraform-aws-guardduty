@@ -4,15 +4,11 @@ A Terraform module that creates an Amazon GuardDuty.
 
 ## Available Features
 
-- Delegated Organization Administrator Account
-- Organization Auto-Enable Configuration
-- Organization Auto-Enable Features
-- Invite Member Account
-- Accept Member Invitation
-- GuardDuty Detector Features
-- GuardDuty Detector Enable/Disable
-- Set Trust/Threat IP list
-- Findings Filter (Saved/Suppression rules)
+- **Detector**: Enable/Suspend, Protection features
+- **Organizations**: Delegated admin, Auto-enable members and features
+- **Member accounts**: Invite, Accept invitation
+- **Findings**: Trusted/Threat IP lists, Filters (Saved/Suppression rules)
+- **Malware Protection for S3**
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
