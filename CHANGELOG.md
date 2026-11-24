@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [4.3.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v4.2.0...v4.3.0) (2026-11-24)
+
+
+### Features
+
+* Add malware_protection_plan submodule ([0a1b6de](https://github.com/aws-ss/terraform-aws-guardduty/commit/0a1b6de560aeae332cc0cfb15fc8d33c1b2bc6ec))
+
 ## [4.2.0](https://github.com/aws-ss/terraform-aws-guardduty/compare/v4.1.0...v4.2.0) (2026-11-13)
 
 
