@@ -2,6 +2,15 @@ provider "aws" {
   region = "ap-northeast-2"
 }
 
+data "aws_caller_identity" "current" {}
+
+data "aws_region" "current" {}
+
+locals {
+  bucket_name = "amzn-s3-demo-bucket"
+  # kms_key_arn = "arn:aws:kms:${data.aws_region.current.region}:${data.aws_caller_identity.current.account_id}:key/1234abcd-12ab-34cd-56ef-1234567890ab"
+}
+
 module "detector" {
   source = "../..//"
 
@@ -84,4 +93,108 @@ module "filter_high_severity_exclude_s3" {
   tags = {
     Name = "HIGH_SEVERITY_EXCLUDE_S3"
   }
+}
+
+data "aws_iam_policy_document" "malware_protection" {
+  statement {
+    sid    = "AllowManagedRuleToSendS3EventsToGuardDuty"
+    effect = "Allow"
+    actions = [
+      "events:PutRule",
+      "events:DeleteRule",
+      "events:PutTargets",
+      "events:RemoveTargets",
+    ]
+    resources = ["arn:aws:events:${data.aws_region.current.region}:${data.aws_caller_identity.current.account_id}:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*"]
+
+    condition {
+      test     = "StringLike"
+      variable = "events:ManagedBy"
+      values   = ["malware-protection-plan.guardduty.amazonaws.com"]
+    }
+  }
+
+  statement {
+    sid    = "AllowGuardDutyToMonitorEventBridgeManagedRule"
+    effect = "Allow"
+    actions = [
+      "events:DescribeRule",
+      "events:ListTargetsByRule",
+    ]
+    resources = ["arn:aws:events:${data.aws_region.current.region}:${data.aws_caller_identity.current.account_id}:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*"]
+  }
+
+  statement {
+    sid    = "AllowPostScanTag"
+    effect = "Allow"
+    actions = [
+      "s3:PutObjectTagging",
+      "s3:GetObjectTagging",
+      "s3:PutObjectVersionTagging",
+      "s3:GetObjectVersionTagging",
+    ]
+    resources = ["arn:aws:s3:::${local.bucket_name}/*"]
+  }
+
+  statement {
+    sid    = "AllowEnableS3EventBridgeEvents"
+    effect = "Allow"
+    actions = [
+      "s3:PutBucketNotification",
+      "s3:GetBucketNotification",
+    ]
+    resources = ["arn:aws:s3:::${local.bucket_name}"]
+  }
+
+  statement {
+    sid       = "AllowPutValidationObject"
+    effect    = "Allow"
+    actions   = ["s3:PutObject"]
+    resources = ["arn:aws:s3:::${local.bucket_name}/malware-protection-resource-validation-object"]
+  }
+
+  statement {
+    sid       = "AllowCheckBucketOwnership"
+    effect    = "Allow"
+    actions   = ["s3:ListBucket"]
+    resources = ["arn:aws:s3:::${local.bucket_name}"]
+  }
+
+  statement {
+    sid    = "AllowMalwareScan"
+    effect = "Allow"
+    actions = [
+      "s3:GetObject",
+      "s3:GetObjectVersion",
+    ]
+    resources = ["arn:aws:s3:::${local.bucket_name}/*"]
+  }
+
+  # statement {
+  #   sid    = "AllowDecryptForMalwareScan"
+  #   effect = "Allow"
+  #   actions = [
+  #     "kms:GenerateDataKey",
+  #     "kms:Decrypt",
+  #   ]
+  #   resources = [local.kms_key_arn]
+  #
+  #   condition {
+  #     test     = "StringLike"
+  #     variable = "kms:ViaService"
+  #     values   = ["s3.${data.aws_region.current.region}.amazonaws.com"]
+  #   }
+  # }
+}
+
+module "malware_protection_plan" {
+  source = "../../modules/malware_protection_plan//"
+
+  bucket_name     = local.bucket_name
+  object_prefixes = ["uploads/"]
+  tagging_status  = "ENABLED"
+
+  create_iam_role = true
+  iam_role_name   = "soc-GuardDutyS3MalwareScanRole"
+  iam_role_policy = data.aws_iam_policy_document.malware_protection.json
 }
